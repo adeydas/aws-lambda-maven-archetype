@@ -1,0 +1,37 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>ws.abhis.aws</groupId>
+    <artifactId>aws-lambda-archetype</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <name>Archetype - aws-lambda-archetype</name>
+    <url>https://abhis.ws</url>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.kuali.maven.wagons</groupId>
+                <artifactId>maven-s3-wagon</artifactId>
+                <version>1.2.1</version>
+            </extension>
+        </extensions>
+    </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>my-maven-repo</id>
+            <url>s3://my-maven-repo/snapshot</url>
+        </snapshotRepository>
+        <repository>
+            <id>my-maven-repo</id>
+            <url>s3://my-maven-repo/release</url>
+        </repository>
+    </distributionManagement>
+    <repositories>
+        <repository>
+            <id>my-maven-repo</id>
+            <url>s3://my-maven-repo/release</url>
+        </repository>
+    </repositories>
+
+</project>

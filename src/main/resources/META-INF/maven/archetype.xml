@@ -1,0 +1,11 @@
+<archetype>
+    <id>aws-lambda-archetype</id>
+    <sources>
+        <source>src/main/java/LambdaHandler.java</source>
+        <source>src/main/java/Request.java</source>
+        <source>src/main/java/Response.java</source>
+    </sources>
+    <testSources>
+        <source>src/test/java/LambdaHandlerTest.java</source>
+    </testSources>
+</archetype>
